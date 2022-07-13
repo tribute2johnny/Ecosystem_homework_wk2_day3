@@ -7,6 +7,7 @@ class TestBear(unittest.TestCase):
     def setUp(self):
         self.bear = Bear("Rupert", "Brown bear")
         self.fish = Fish("Salmon")
+        
     def test_bear_has_name(self):
         self.assertEqual("Rupert", self.bear.name)
 
