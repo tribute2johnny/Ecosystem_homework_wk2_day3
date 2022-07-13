@@ -4,4 +4,9 @@ from src.bear import Bear
 
 
 class TestFish(unittest.TestCase):
-    pass
+
+    def setUp(self):
+        self.fish = Fish("Salmon")
+
+    def test_fish_has_name(self):
+        self.assertEqual("Salmon", self.fish.name)

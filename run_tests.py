@@ -1,7 +1,7 @@
 import unittest
 
-from tests.bear_test import Bear
-from tests.fish_test import Fish
+from tests.bear_test import TestBear
+from tests.fish_test import TestFish
 
 
 if __name__ == '__main__':
