@@ -10,9 +10,9 @@ class Bear:
     def eat_fish(self, fish_eaten):
         self.stomach.append(fish_eaten)
 
-
-
     def food_count(self):
         return len(self.stomach)
 
     
+        
+        

@@ -5,3 +5,9 @@ class River:
 
     def river_name(self):
         return self.name
+
+    def fish_count(self):
+        return self.num_fish
+
+    def remove_fish(self):
+        return self.num_fish - 1
