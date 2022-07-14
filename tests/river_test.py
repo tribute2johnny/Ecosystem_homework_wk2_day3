@@ -1,18 +1,22 @@
 import unittest
 from src.river import River
-from src.bear import Bear
+from src.fish import Fish
 
 
 class TestRiver(unittest.TestCase):
     
     def setUp(self):
-        self.river = River("Clyde", 100)
+        self.fish1 = Fish("Nemo")
+        self.fish2 = Fish("Jaws")
+        self.river = River("Clyde", [self.fish1, self.fish2])
 
     def test_river_has_name(self):
         self.assertEqual("Clyde", self.river.name)
 
     def test_amount_of_fish(self):
-        self.assertEqual(100, self.river.num_fish)
+        self.assertEqual(2, self.river.fish_count())
 
-    def test_remove_fish(self):
-        self.assertEqual(99, self.river.remove_fish())
+    def test_can_get_fish(self):
+        fish = self.river.give_fish()
+        self.assertEqual(1, self.river.fish_count())
+        self.assertEqual("Jaws", fish.name)

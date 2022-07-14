@@ -15,4 +15,6 @@ class Bear:
 
     
         
-        
+    def get_fish_from_river(self, river):
+        fish = river.give_fish()
+        self.eat_fish(fish)

@@ -24,7 +24,8 @@ class TestBear(unittest.TestCase):
         self.bear.eat_fish(self.fish)
         self.assertEqual(1, self.bear.food_count())
 
-    # def test_bear_can_eat_fish(self):
-    #     self.bear.eat_fish(self.fish)
-    #     self.assertEqual(1, self.bear.food_count())
-    #     self.assertEqual(99, self.river.remove_fish)
+    def test_bear_can_get_fish_from_river(self):
+        river = River("Amazon", [self.fish])
+        self.bear.get_fish_from_river(river)
+        self.assertEqual(1, self.bear.food_count())
+        self.assertEqual(0, river.fish_count())
